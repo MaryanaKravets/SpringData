@@ -6,8 +6,6 @@ import edu.spingdata.hw14.repository.AuthorRepository;
 import edu.spingdata.hw14.repository.BookRepository;
 import org.springframework.stereotype.Service;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 import java.util.*;
 
 @Service
@@ -15,17 +13,14 @@ public class PersonService implements IPersonService {
     private final AuthorRepository authorRepository;
     private final BookRepository bookRepository;
 
-    @PersistenceContext
-    private EntityManager entityManager;
-
     public PersonService(AuthorRepository authorRepository, BookRepository bookRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
     }
 
     @Override
-    public Author addAuthor(Author author){
-        return authorRepository.saveAndFlush(author);
+    public void addAuthor(Author author) {
+        authorRepository.saveAndFlush(author);
     }
 
     @Override
@@ -34,20 +29,14 @@ public class PersonService implements IPersonService {
     }
 
     @Override
-    public Book addBook(Book book){
-       return bookRepository.saveAndFlush(book);
+    public void addBook(Book book) {
+        bookRepository.saveAndFlush(book);
     }
 
     @Override
     public void deleteBookById(int id) {
         bookRepository.deleteById(id);
     }
-
-//    @Override
-//    public List<Author> addBookToAuthor(int authorId, Book book) {
-//       return entityManager.createQuery("select from Author as a where a.id=authorId",Author.class)
-//                .getResultList();
-//    }
 
     @Override
     public List<Book> sortedBookByAuthor(int authorId) {
@@ -60,12 +49,12 @@ public class PersonService implements IPersonService {
     }
 
     @Override
-    public Book updateBook(Book book){
+    public Book updateBook(Book book) {
         return bookRepository.saveAndFlush(book);
     }
 
     @Override
-    public Author updateAuthor(Author author){
+    public Author updateAuthor(Author author) {
         return authorRepository.saveAndFlush(author);
     }
 

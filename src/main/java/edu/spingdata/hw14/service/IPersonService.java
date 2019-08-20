@@ -7,15 +7,13 @@ import java.util.List;
 
 public interface IPersonService {
 
-    Author addAuthor(Author author);
+    void addAuthor(Author author);
 
-    void deleteAuthorById (int id);
+    void deleteAuthorById(int id);
 
-    Book addBook(Book book);
+    void addBook(Book book);
 
     void deleteBookById(int id);
-
-//    List<Author> addBookToAuthor(int authorId, Book book);
 
     List<Book> sortedBookByAuthor(int authorId);
 

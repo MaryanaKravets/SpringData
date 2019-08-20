@@ -47,61 +47,43 @@ public class LibraryRestController {
     @ResponseBody
     @PostMapping("/author")
     public ResponseEntity<Author> addAuthor(@RequestBody Author author) {
-         iPersonService.addAuthor(author);
-         return ResponseEntity
-                 .status(HttpStatus.CREATED)
-                 .build();
+        iPersonService.addAuthor(author);
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .build();
     }
 
     @ResponseBody
     @PostMapping("/book")
     public ResponseEntity<Book> addBook(@RequestBody Book book) {
-         iPersonService.addBook(book);
-         return ResponseEntity
-                 .status(HttpStatus.CREATED)
-                 .build();
+        iPersonService.addBook(book);
+        return ResponseEntity
+                .status(HttpStatus.CREATED)
+                .build();
     }
-
-
-//    @ResponseBody
-//    @PutMapping("/author/book")
-//    public Map<Integer, Book> addBookToAuthor(
-//            @RequestParam(value = "authorId") int authorId,
-//            @RequestParam(value = "bookId") int bookId,
-//            @RequestParam(value = "bookTitle") String bookTitle,
-//            @RequestParam(value = "bookGenre") String bookGenre,
-//            @RequestParam(value = "bookDesc") String bookDesc,
-//            @RequestParam(value = "bookRate") int bookRate
-//    ) {
-//        Map<Integer, Book> map = new LinkedHashMap<>();
-//        Book book1 = new Book(bookId, bookTitle, bookGenre, bookDesc, bookRate);
-//        personService.addBookToAuthor(authorId, book1);
-//        map.put(authorId, book1);
-//        return map;
-//    }
 
     @ResponseBody
     @DeleteMapping("/author/{id}")
     public void deleteAuthor(@PathVariable("id") int authorId) {
-         iPersonService.deleteAuthorById(authorId);
+        iPersonService.deleteAuthorById(authorId);
     }
 
     @ResponseBody
     @DeleteMapping("/book/{id}")
     public void deleteBook(@PathVariable("id") int bookId) {
-         iPersonService.deleteBookById(bookId);
+        iPersonService.deleteBookById(bookId);
     }
 
     @ResponseBody
     @PatchMapping("author/{id}")
-    public void updateAuthor(@RequestBody Author author){
-         iPersonService.updateAuthor(author);
+    public Author updateAuthor(@RequestBody Author author) {
+        return iPersonService.updateAuthor(author);
     }
 
     @ResponseBody
     @PatchMapping("book/{id}")
-    public void updateBook(@RequestBody Book book){
-        iPersonService.updateBook(book);
+    public Book updateBook(@RequestBody Book book) {
+        return iPersonService.updateBook(book);
     }
 }
 

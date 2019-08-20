@@ -18,10 +18,13 @@ public class Book implements Serializable {
 
     @Column(name = "title", nullable = false)
     private String title;
+
     @Column(name = "genre", nullable = false)
     private String genre;
+
     @Column(name = "description", nullable = false)
     private String description;
+
     @Column(name = "rate", nullable = false)
     private int rate;
 

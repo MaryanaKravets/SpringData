@@ -19,7 +19,6 @@ public class Author implements Serializable {
     @Column(name = "last_name",nullable = false)
     private String lName;
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-   // @ManyToMany(cascade ={ CascadeType.PERSIST,CascadeType.MERGE})
     @JoinTable(name = "author_books",joinColumns = {@JoinColumn(name = "author_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "book_id", referencedColumnName = "id")})
     private Set<Book> books= new HashSet<>();
