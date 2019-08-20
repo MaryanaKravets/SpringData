@@ -95,15 +95,13 @@ public class LibraryRestController {
     @ResponseBody
     @PatchMapping("author/{id}")
     public void updateAuthor(@RequestBody Author author){
-            //@RequestParam("id") int updateId, @PathVariable("id") int id) {
-         iPersonService.updateAuthor(author);//id, updateId);
+         iPersonService.updateAuthor(author);
     }
 
     @ResponseBody
     @PatchMapping("book/{id}")
     public void updateBook(@RequestBody Book book){
-            //@RequestParam("id") int updateId, @PathVariable("id") int id) {
-        iPersonService.updateBook(book);//id, updateId);
+        iPersonService.updateBook(book);
     }
 }
 

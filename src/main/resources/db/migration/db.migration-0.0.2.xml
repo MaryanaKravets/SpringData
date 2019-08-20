@@ -11,7 +11,7 @@
                 <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
             <column name="author_id" type="int">
-                <constraints nullable="false" foreignKeyName="fk_book_author" references="Author(id)"/>
+                <constraints nullable="false" foreignKeyName="fk_book_author" references="authors(id)"/>
             </column>
             <column name="title" type="varchar(50)">
                 <constraints nullable="false"/>
@@ -30,11 +30,6 @@
             </column>
 
         </createTable>
-    </changeSet>
-
-    <changeSet id="7" author="Maryanna">
-
-        <addUniqueConstraint tableName="books" columnNames="title"/>
     </changeSet>
 
 </databaseChangeLog>

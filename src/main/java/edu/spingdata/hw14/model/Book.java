@@ -7,7 +7,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-//@AllArgsConstructor
 @Data
 @Table(name = "books")
 public class Book implements Serializable {
@@ -30,15 +29,6 @@ public class Book implements Serializable {
     private Set<Author> authorSet=new HashSet<>();
 
     public Book(){};
-
-//    public Book(int authorId, String title, String genre, String description, int rate){//, Set<Author> authorSet) {
-//        this.authorId=authorId;
-//        this.title = title;
-//        this.genre = genre;
-//        this.description = description;
-//        this.rate = rate;
-//      //  this.authorSet = authorSet;
-//    }
 
     public void addAuthor(Author author){
         this.authorSet.add(author);

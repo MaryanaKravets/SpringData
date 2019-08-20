@@ -6,43 +6,43 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="5" author="Maryanna">
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Elizabeth</column>
             <column name="last_name">Lim</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Pierce</column>
             <column name="last_name">Brown</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">David</column>
             <column name="last_name">McCullough</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Michael</column>
             <column name="last_name">Robotmhan</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Ellison</column>
             <column name="last_name">Cooper</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Rachel</column>
             <column name="last_name">DeLoache</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Zara</column>
             <column name="last_name">Raheem</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Elyssa</column>
             <column name="last_name">Friendland</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Spencer</column>
             <column name="last_name">Quinn</column>
         </insert>
-        <insert tableName="author">
+        <insert tableName="authors">
             <column name="first_name">Jay</column>
             <column name="last_name">McLean</column>
         </insert>

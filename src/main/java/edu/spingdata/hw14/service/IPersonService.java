@@ -15,15 +15,15 @@ public interface IPersonService {
 
     void deleteBookById(int id);
 
-    List<Author> addBookToAuthor(int authorId, Book book);
+//    List<Author> addBookToAuthor(int authorId, Book book);
 
     List<Book> sortedBookByAuthor(int authorId);
 
     List<Book> sortedBookByGenre(String genre);
 
-    Book updateBook(Book book);//int bookId, int updateBookId);
+    Book updateBook(Book book);
 
-    Author updateAuthor(Author author);//int authorId, int updateAuthorId);
+    Author updateAuthor(Author author);
 
     List<Author> findAllAuthors();
 
