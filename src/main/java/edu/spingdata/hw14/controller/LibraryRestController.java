@@ -3,7 +3,6 @@ package edu.spingdata.hw14.controller;
 import edu.spingdata.hw14.model.Author;
 import edu.spingdata.hw14.model.Book;
 import edu.spingdata.hw14.service.IPersonService;
-import edu.spingdata.hw14.service.PersonService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +15,21 @@ import java.util.*;
 public class LibraryRestController {
 
     IPersonService iPersonService;
-   // private PersonService personService;
+
+
+    @ResponseBody
+    @GetMapping("/book")
+    public List<Book> findAllBook() {
+
+        return iPersonService.findAllBooks();
+    }
+
+    @ResponseBody
+    @GetMapping("/author")
+    public List<Author> findAllAuthor() {
+
+        return iPersonService.findAllAuthors();
+    }
 
     @ResponseBody
     @GetMapping("/{id}")

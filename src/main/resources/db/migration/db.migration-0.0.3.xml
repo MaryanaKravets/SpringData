@@ -6,7 +6,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="3" author="Maryanna">
-        <createTable tableName="Author_Book">
+        <createTable tableName="Author_Books">
 
             <column name="author_id" type="int">
                 <constraints nullable="false"/>

@@ -6,12 +6,12 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="4" author="Maryanna">
-        <addPrimaryKey tableName="Author_Book" columnNames="author_id, book_id"/>
+        <addPrimaryKey tableName="Author_Books" columnNames="author_id, book_id"/>
 
-        <addForeignKeyConstraint baseTableName="Author_Book" baseColumnNames="author_id" constraintName="FK_Author_Author_Book" referencedTableName="Author"
+        <addForeignKeyConstraint baseTableName="Author_Books" baseColumnNames="author_id" constraintName="FK_Author_Author_Book" referencedTableName="author"
                                  referencedColumnNames="id" onDelete="CASCADE" onUpdate="RESTRICT"/>
 
-        <addForeignKeyConstraint baseTableName="Author_Book" baseColumnNames="book_id" constraintName="FK_Book_Author_Book" referencedTableName="Book"
+        <addForeignKeyConstraint baseTableName="Author_Books" baseColumnNames="book_id" constraintName="FK_Book_Author_Book" referencedTableName="books"
                                  referencedColumnNames="id" onDelete="CASCADE" onUpdate="RESTRICT"/>
 
     </changeSet>

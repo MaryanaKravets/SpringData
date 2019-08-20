@@ -6,7 +6,7 @@
     http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
     <changeSet id="2" author="Maryanna">
-        <createTable tableName="Book">
+        <createTable tableName="books">
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false" unique="true"/>
             </column>
@@ -29,14 +29,12 @@
                 <constraints nullable="false"/>
             </column>
 
-<!--            <column name="author_set" type="varchar"/> -->
-
         </createTable>
     </changeSet>
 
     <changeSet id="7" author="Maryanna">
 
-        <addUniqueConstraint tableName="Book" columnNames="title"/>
+        <addUniqueConstraint tableName="books" columnNames="title"/>
     </changeSet>
 
 </databaseChangeLog>
