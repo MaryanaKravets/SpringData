@@ -20,14 +20,4 @@
 
     </changeSet>
 
-
-
-
-
-
-
-<!--    <changeSet id="7" author="Maryanna">-->
-<!--        <addPrimaryKey tableName="Author_Book" columnNames="author_id, book_id"/>-->
-<!--    </changeSet>-->
-
 </databaseChangeLog>

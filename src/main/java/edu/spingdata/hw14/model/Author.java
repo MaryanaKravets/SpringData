@@ -1,5 +1,6 @@
 package edu.spingdata.hw14.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -21,12 +22,9 @@ public class Author implements Serializable {
     @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinTable(name = "author_books",joinColumns = {@JoinColumn(name = "author_id", referencedColumnName = "id")},
             inverseJoinColumns = {@JoinColumn(name = "book_id", referencedColumnName = "id")})
+    @JsonIgnore
     private Set<Book> books= new HashSet<>();
 
     public Author(){};
-
-    public void addBook(Book book){
-        this.books.add(book);
-    }
 
 }

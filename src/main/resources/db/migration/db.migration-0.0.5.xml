@@ -54,49 +54,61 @@
             <column name="author_id">1</column>
             <column name="title">Spin the dawn</column>
             <column name="genre">Fantasy</column>
-            <column name="description">About the girl who poses as a boy to compete for the role of imperial tailor</column>
+            <column name="description">About the girl who poses as a boy to compete for the role of imperial tailor
+            </column>
             <column name="rate">3</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">2</column>
             <column name="title">Dark age</column>
             <column name="genre">Fantasy</column>
-            <column name="description">The #1 New York Times bestselling author of Morning Star returns to the Red Rising universe with the thrilling sequel to Iron Gold</column>
+            <column name="description">The #1 New York Times bestselling author of Morning Star returns to the Red
+                Rising universe with the thrilling sequel to Iron Gold
+            </column>
             <column name="rate">2</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">3</column>
             <column name="title">John Adams</column>
             <column name="genre">Historical</column>
-            <column name="description">The enthralling, often surprising story of John Adams, one of the most important and fascinating americans who ever lived</column>
+            <column name="description">The enthralling, often surprising story of John Adams, one of the most important
+                and fascinating americans who ever lived
+            </column>
             <column name="rate">4</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">3</column>
             <column name="title">Truman</column>
             <column name="genre">Biography</column>
-            <column name="description">The biography of Harry S. Truman, whose presidency included momentous events from the atomic bombing of Japan</column>
+            <column name="description">The biography of Harry S. Truman, whose presidency included momentous events from
+                the atomic bombing of Japan
+            </column>
             <column name="rate">4</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">3</column>
             <column name="title">The wright brothers</column>
             <column name="genre">Historical</column>
-            <column name="description">Dramatic story about the courageous brothers who taught the world how to fly</column>
+            <column name="description">Dramatic story about the courageous brothers who taught the world how to fly
+            </column>
             <column name="rate">5</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">4</column>
             <column name="title">Good girl, bad girl</column>
             <column name="genre">Crime</column>
-            <column name="description">A girl is discovered hiding in a secret room in the aftermath of a terrible crime</column>
+            <column name="description">A girl is discovered hiding in a secret room in the aftermath of a terrible
+                crime
+            </column>
             <column name="rate">5</column>
         </insert>
         <insert tableName="books">
             <column name="author_id">4</column>
             <column name="title">Shatter</column>
             <column name="genre">Thriller</column>
-            <column name="description">Joe Loughlin is on familiar terriory-standing on a bridge high above a flooded gorge, trying to stop a distraught woman from jumping</column>
+            <column name="description">Joe Loughlin is on familiar terriory-standing on a bridge high above a flooded
+                gorge, trying to stop a distraught woman from jumping
+            </column>
             <column name="rate">3</column>
         </insert>
         <insert tableName="books">
@@ -117,7 +129,9 @@
             <column name="author_id">7</column>
             <column name="title">The marriage clock</column>
             <column name="genre">Comedy</column>
-            <column name="description">In Zara Raheems fresh,funny,smart debut,a young, Muslim-American woman is given three months to find the husband</column>
+            <column name="description">In Zara Raheems fresh,funny,smart debut,a young, Muslim-American woman is given
+                three months to find the husband
+            </column>
             <column name="rate">5</column>
         </insert>
         <insert tableName="books">
@@ -138,10 +152,68 @@
             <column name="author_id">10</column>
             <column name="title">First and Forever</column>
             <column name="genre">Romance</column>
-            <column name="description">FF is the second book in the Heartache Duet, and must be read after Heartache and Hope</column>
+            <column name="description">FF is the second book in the Heartache Duet, and must be read after Heartache and
+                Hope
+            </column>
             <column name="rate">5</column>
         </insert>
 
+    </changeSet>
+
+    <changeSet id="8" author="Maryanna">
+        <insert tableName="Author_Books">
+            <column name="author_id">1</column>
+            <column name="book_id">1</column>
+        </insert>
+
+        <insert tableName="Author_Books">
+            <column name="author_id">2</column>
+            <column name="book_id">2</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">3</column>
+            <column name="book_id">3</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">3</column>
+            <column name="book_id">4</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">3</column>
+            <column name="book_id">5</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">4</column>
+            <column name="book_id">6</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">4</column>
+            <column name="book_id">7</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">5</column>
+            <column name="book_id">8</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">6</column>
+            <column name="book_id">9</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">7</column>
+            <column name="book_id">10</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">8</column>
+            <column name="book_id">11</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">9</column>
+            <column name="book_id">12</column>
+        </insert>
+        <insert tableName="Author_Books">
+            <column name="author_id">10</column>
+            <column name="book_id">13</column>
+        </insert>
     </changeSet>
 
 </databaseChangeLog>

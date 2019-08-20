@@ -1,4 +1,5 @@
 package edu.spingdata.hw14.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -27,13 +28,10 @@ public class Book implements Serializable {
 
     @Column(name = "rate", nullable = false)
     private int rate;
-
+@JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY,mappedBy = "books")
     private Set<Author> authorSet=new HashSet<>();
 
     public Book(){};
 
-    public void addAuthor(Author author){
-        this.authorSet.add(author);
-    }
 }
