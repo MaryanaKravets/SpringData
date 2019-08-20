@@ -1,0 +1,165 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="5" author="Maryanna">
+        <insert tableName="Author">
+            <column name="first_name">Elizabeth</column>
+            <column name="last_name">Lim</column>
+        </insert>
+        <insert tableName="Author">
+            <column name="first_name">Pierce</column>
+            <column name="last_name">Brown</column>
+        </insert>
+        <insert tableName="Author">
+            <column name="first_name">David</column>
+            <column name="last_name">McCullough</column>
+        </insert>
+        <insert tableName="Author">
+            <column name="first_name">Michael</column>
+            <column name="last_name">Robotmhan</column>
+        </insert>
+        <insert tableName="Author">
+            <column name="first_name">Ellison</column>
+            <column name="last_name">Cooper</column>
+        </insert>
+        <insert tableName="Author">
+<!--            <column name="id">6</column>-->
+            <column name="first_name">Rachel</column>
+            <column name="last_name">DeLoache</column>
+        </insert>
+        <insert tableName="Author">
+<!--            <column name="id">7</column>-->
+            <column name="first_name">Zara</column>
+            <column name="last_name">Raheem</column>
+        </insert>
+        <insert tableName="Author">
+<!--            <column name="id">8</column>-->
+            <column name="first_name">Elyssa</column>
+            <column name="last_name">Friendland</column>
+        </insert>
+        <insert tableName="Author">
+<!--            <column name="id">9</column>-->
+            <column name="first_name">Spencer</column>
+            <column name="last_name">Quinn</column>
+        </insert>
+        <insert tableName="Author">
+<!--            <column name="id">10</column>-->
+            <column name="first_name">Jay</column>
+            <column name="last_name">McLean</column>
+        </insert>
+
+    </changeSet>
+
+    <changeSet id="6" author="Maryanna">
+        <insert tableName="Book">
+<!--            <column name="id">1</column>-->
+            <column name="author_id">1</column>
+            <column name="title">Spin the dawn</column>
+            <column name="genre">Fantasy</column>
+            <column name="description">About the girl who poses as a boy to compete for the role of imperial tailor</column>
+            <column name="rate">3</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">2</column>-->
+            <column name="author_id">2</column>
+            <column name="title">Dark age</column>
+            <column name="genre">Fantasy</column>
+            <column name="description">The #1 New York Times bestselling author of Morning Star returns to the Red Rising universe with the thrilling sequel to Iron Gold</column>
+            <column name="rate">2</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">3</column>-->
+            <column name="author_id">3</column>
+            <column name="title">John Adams</column>
+            <column name="genre">Historical</column>
+            <column name="description">The enthralling, often surprising story of John Adams, one of the most important and fascinating americans who ever lived</column>
+            <column name="rate">4</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">4</column>-->
+            <column name="author_id">3</column>
+            <column name="title">Truman</column>
+            <column name="genre">Biography</column>
+            <column name="description">The biography of Harry S. Truman, whose presidency included momentous events from the atomic bombing of Japan</column>
+            <column name="rate">4</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">5</column>-->
+            <column name="author_id">3</column>
+            <column name="title">The wright brothers</column>
+            <column name="genre">Historical</column>
+            <column name="description">Dramatic story about the courageous brothers who taught the world how to fly</column>
+            <column name="rate">5</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">6</column>-->
+            <column name="author_id">4</column>
+            <column name="title">Good girl, bad girl</column>
+            <column name="genre">Crime</column>
+            <column name="description">A girl is discovered hiding in a secret room in the aftermath of a terrible crime</column>
+            <column name="rate">5</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">7</column>-->
+            <column name="author_id">4</column>
+            <column name="title">Shatter</column>
+            <column name="genre">Thriller</column>
+            <column name="description">Joe Loughlin is on familiar terriory-standing on a bridge high above a flooded gorge, trying to stop a distraught woman from jumping</column>
+            <column name="rate">3</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">8</column>-->
+            <column name="author_id">5</column>
+            <column name="title">Buried</column>
+            <column name="genre">Thriller</column>
+            <column name="description">Senior Special Agent Sayer Altair studied the minds of psychopaths</column>
+            <column name="rate">1</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">9</column>-->
+            <column name="author_id">6</column>
+            <column name="title">My friend Anna</column>
+            <column name="genre">Crime</column>
+            <column name="description">Story about Anna, a young con artist posing as a German heiress</column>
+            <column name="rate">5</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">10</column>-->
+            <column name="author_id">7</column>
+            <column name="title">The marriage clock</column>
+            <column name="genre">Comedy</column>
+            <column name="description">In Zara Raheems fresh,funny,smart debut,a young, Muslim-American woman is given three months to find the husband</column>
+            <column name="rate">5</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">11</column>-->
+            <column name="author_id">8</column>
+            <column name="title">The floating feldmans</column>
+            <column name="genre">Comedy</column>
+            <column name="description">Between the troublesome family secrets,old sibling rivalries</column>
+            <column name="rate">1</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">12</column>-->
+            <column name="author_id">9</column>
+            <column name="title">Heart of barkness</column>
+            <column name="genre">Comedy</column>
+            <column name="description">Chet the dog, the most lovable narrator in all of crime fiction</column>
+            <column name="rate">2</column>
+        </insert>
+        <insert tableName="Book">
+<!--            <column name="id">13</column>-->
+            <column name="author_id">10</column>
+            <column name="title">First and Forever</column>
+            <column name="genre">Romance</column>
+            <column name="description">FF is the second book in the Heartache Duet, and must be read after Heartache and Hope</column>
+            <column name="rate">5</column>
+        </insert>
+
+    </changeSet>
+
+</databaseChangeLog>
