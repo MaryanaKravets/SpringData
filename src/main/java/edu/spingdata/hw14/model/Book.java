@@ -1,6 +1,7 @@
 package edu.spingdata.hw14.model;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -10,6 +11,7 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "books")
+@NoArgsConstructor
 public class Book implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +30,8 @@ public class Book implements Serializable {
 
     @Column(name = "rate", nullable = false)
     private int rate;
-@JsonIgnore
+
+    @JsonIgnore
     @ManyToMany(fetch = FetchType.LAZY,mappedBy = "books")
     private Set<Author> authorSet=new HashSet<>();
-
-    public Book(){};
-
 }

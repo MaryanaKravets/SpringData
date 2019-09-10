@@ -2,52 +2,53 @@ package edu.spingdata.hw14.controller;
 
 import edu.spingdata.hw14.model.Author;
 import edu.spingdata.hw14.model.Book;
-import edu.spingdata.hw14.service.IPersonService;
-import lombok.AllArgsConstructor;
+import edu.spingdata.hw14.service.PersonService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
 
-@AllArgsConstructor
 @RestController
+@RequiredArgsConstructor
 public class LibraryRestController {
 
-    IPersonService iPersonService;
-
+    private final PersonService personService;
 
     @ResponseBody
     @GetMapping("/book")
     public List<Book> findAllBook() {
 
-        return iPersonService.findAllBooks();
+        return personService.findAllBooks();
     }
 
     @ResponseBody
     @GetMapping("/author")
     public List<Author> findAllAuthor() {
 
-        return iPersonService.findAllAuthors();
+        return personService.findAllAuthors();
     }
 
     @ResponseBody
     @GetMapping("/{id}")
     public List<Book> sortedBookByAuthor(@PathVariable("id") int id) {
 
-        return iPersonService.sortedBookByAuthor(id);
+        return personService.sortedBookByAuthor(id);
     }
 
     @ResponseBody
-    @GetMapping("")
+    @GetMapping
     public List<Book> sortedBookByGenre(@RequestParam(value = "genre") String genre) {
-        return iPersonService.sortedBookByGenre(genre);
+
+        return personService.sortedBookByGenre(genre);
     }
 
     @ResponseBody
     @PostMapping("/author")
     public ResponseEntity<Author> addAuthor(@RequestBody Author author) {
-        iPersonService.addAuthor(author);
+        personService.addAuthor(author);
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .build();
@@ -56,7 +57,8 @@ public class LibraryRestController {
     @ResponseBody
     @PostMapping("/book")
     public ResponseEntity<Book> addBook(@RequestBody Book book) {
-        iPersonService.addBook(book);
+        personService.addBook(book);
+
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .build();
@@ -65,25 +67,29 @@ public class LibraryRestController {
     @ResponseBody
     @DeleteMapping("/author/{id}")
     public void deleteAuthor(@PathVariable("id") int authorId) {
-        iPersonService.deleteAuthorById(authorId);
+
+        personService.deleteAuthorById(authorId);
     }
 
     @ResponseBody
     @DeleteMapping("/book/{id}")
-    public void deleteBook(@PathVariable("id") int bookId) {
-        iPersonService.deleteBookById(bookId);
+    public void deleteBook(@PathVariable("id") int bookId){
+
+        personService.deleteBookById(bookId);
     }
 
     @ResponseBody
     @PatchMapping("author/{id}")
     public Author updateAuthor(@RequestBody Author author) {
-        return iPersonService.updateAuthor(author);
+
+        return personService.updateAuthor(author);
     }
 
     @ResponseBody
     @PatchMapping("book/{id}")
     public Book updateBook(@RequestBody Book book) {
-        return iPersonService.updateBook(book);
+
+        return personService.updateBook(book);
     }
 }
 

@@ -1,8 +1,9 @@
 package edu.spingdata.hw14.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import com.fasterxml.jackson.annotation.*;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.HashSet;
@@ -11,6 +12,7 @@ import java.util.Set;
 @Entity
 @Data
 @Table(name = "authors")
+@NoArgsConstructor
 public class Author implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,7 +26,4 @@ public class Author implements Serializable {
             inverseJoinColumns = {@JoinColumn(name = "book_id", referencedColumnName = "id")})
     @JsonIgnore
     private Set<Book> books= new HashSet<>();
-
-    public Author(){};
-
 }
