@@ -50,6 +50,7 @@ public class LibraryRestController {
         personService.addAuthor(author);
 
         return ResponseEntity
+
                 .status(HttpStatus.CREATED)
                 .build();
     }
@@ -60,6 +61,7 @@ public class LibraryRestController {
         personService.addBook(book);
 
         return ResponseEntity
+
                 .status(HttpStatus.CREATED)
                 .build();
     }
